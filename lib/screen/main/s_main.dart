@@ -52,8 +52,7 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
     );
   }
 
-  bool get isRootPage =>
-      _currentTab == TabItem.home && _currentTabNavigationKey.currentState?.canPop() == false;
+  bool get isRootPage => _currentTab == TabItem.home && _currentTabNavigationKey.currentState?.canPop() == false;
 
   IndexedStack get pages => IndexedStack(
       index: _currentIndex,
@@ -123,8 +122,7 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
     });
   }
 
-  BottomNavigationBarItem bottomItem(
-      bool activate, IconData iconData, IconData inActivateIconData, String label) {
+  BottomNavigationBarItem bottomItem(bool activate, IconData iconData, IconData inActivateIconData, String label) {
     return BottomNavigationBarItem(
         icon: Icon(
           key: ValueKey(label),
